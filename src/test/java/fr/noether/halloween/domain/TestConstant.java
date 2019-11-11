@@ -17,6 +17,10 @@ class TestConstant {
         return Bag.of(CANDY, CANDY);
     }
 
+    static Bag bagOfThreeCandies() {
+        return Bag.of(CANDY, CANDY, CANDY);
+    }
+
     static Bag bagOfTwoApple() {
         return Bag.of(APPLE, APPLE);
     }

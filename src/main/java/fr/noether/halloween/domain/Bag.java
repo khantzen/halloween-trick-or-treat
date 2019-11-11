@@ -1,11 +1,13 @@
 package fr.noether.halloween.domain;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Bag {
     private final String[] content;
 
-    public Bag(String[] candy) {
+    private Bag(String[] candy) {
         this.content = candy;
     }
 
@@ -13,17 +15,25 @@ public class Bag {
         return new Bag(candy);
     }
 
-    public boolean doesContainEnoughCandy() {
+    boolean doesContainEnoughCandy() {
         var candiesInBag = Arrays.stream(content)
                 .filter("candy"::equals)
                 .count();
         return candiesInBag >= 2;
     }
 
-    public boolean doesNotContainTheBomb() {
+    boolean doesNotContainTheBomb() {
         long count = Arrays.stream(content)
                 .filter("bomb"::equals)
                 .count();
         return count == 0;
+    }
+
+    CandyPerBagGrouping candyCount() {
+        var candyInBag = Arrays.stream(content)
+                .filter("candy"::equals)
+                .count();
+
+        return CandyPerBagGrouping.singleBagWith(candyInBag);
     }
 }

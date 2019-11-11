@@ -1,9 +1,8 @@
 package fr.noether.halloween.domain;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import static fr.noether.halloween.domain.TestConstant.*;
+import static fr.noether.halloween.domain.TestConstant.assertThankYouStrangeUncle;
 import static fr.noether.halloween.domain.TestConstant.bagOfTwoCandies;
 
 public class EnoughCandyTest {

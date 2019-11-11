@@ -17,6 +17,8 @@ public class UncleJack {
         return Arrays.stream(bags)
                 .filter(Bag::doesNotContainTheBomb)
                 .filter(Bag::doesContainEnoughCandy)
-                .count();
+                .map(Bag::candyCount)
+                .reduce(CandyPerBagGrouping.empty(), CandyPerBagGrouping::merge)
+                .maximumAvailableBags();
     }
 }
