@@ -17,6 +17,7 @@ Halloween is coming, and many children are in front of your house. They are shou
   1. Each child has at least two candies;
   2. Each child gets the same amount of candy.
   3. No children get the "bomb" ;-)
+  4. Packets cannot be divided, each child gets a full packet
   
 Some Examples
 -------------
@@ -35,7 +36,7 @@ trickOrTreat(3,[["candy","apple","candy"],["candy","candy"]])
 should return: "Trick or treat!"(One child has no candy)
 
 trickOrTreat(3,[["candy","apple","candy"],["candy","candy"],["candy","bomb","candy"]])
-should return: "Trick or treat!"(Some child got a bomb)4. Packets cannot be divided, each child gets a full packet
+should return: "Trick or treat!"(Some child got a bomb)
 ```
 
 
